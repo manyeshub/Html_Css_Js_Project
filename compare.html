@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Products - Clean Energy Hub</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav>
+    <div class="logo">Clean<span>Energy</span>Hub</div>
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="compare.html" class="active">Compare</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- ==================== PAGE BANNER ==================== -->
+<div class="page-banner">
+    <h1>Compare Appliances</h1>
+    <p>Select three appliances from the dropdowns below to compare them side by side</p>
+</div>
+
+
+<!-- ==================== COMPARE SECTION ==================== -->
+<section>
+
+    <!-- THREE DROPDOWN SELECTORS -->
+    <div class="compare-selectors">
+
+        <div class="sel-group">
+            <label for="sel1">Appliance 1</label>
+            <select id="sel1" class="compare-select">
+                <option value="ac_5star">EcoCool Inverter AC 5 Star</option>
+                <option value="ac_3star">CoolBreeze AC 3 Star</option>
+                <option value="fridge_5star">GreenFrost Fridge 5 Star</option>
+                <option value="washer_5star">AquaSave Washer 5 Star</option>
+                <option value="fan_5star">WhisperBreeze BLDC Fan</option>
+            </select>
+        </div>
+
+        <div class="sel-group">
+            <label for="sel2">Appliance 2</label>
+            <select id="sel2" class="compare-select">
+                <option value="ac_3star">CoolBreeze AC 3 Star</option>
+                <option value="ac_5star">EcoCool Inverter AC 5 Star</option>
+                <option value="fridge_5star">GreenFrost Fridge 5 Star</option>
+                <option value="washer_5star">AquaSave Washer 5 Star</option>
+                <option value="fan_5star">WhisperBreeze BLDC Fan</option>
+            </select>
+        </div>
+
+        <div class="sel-group">
+            <label for="sel3">Appliance 3</label>
+            <select id="sel3" class="compare-select">
+                <option value="fridge_5star">GreenFrost Fridge 5 Star</option>
+                <option value="ac_5star">EcoCool Inverter AC 5 Star</option>
+                <option value="ac_3star">CoolBreeze AC 3 Star</option>
+                <option value="washer_5star">AquaSave Washer 5 Star</option>
+                <option value="fan_5star">WhisperBreeze BLDC Fan</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <!-- COMPARISON TABLE -->
+    <!-- JavaScript fills in the values based on dropdown selections -->
+    <table class="compare-table">
+
+        <!-- Table header row -->
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th id="col1_name">-</th>
+                <th id="col2_name">-</th>
+                <th id="col3_name">-</th>
+            </tr>
+        </thead>
+
+        <!-- Table body rows -->
+        <tbody>
+
+            <tr>
+                <td class="row-label">Type</td>
+                <td id="col1_type">-</td>
+                <td id="col2_type">-</td>
+                <td id="col3_type">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Power Rating</td>
+                <td id="col1_power">-</td>
+                <td id="col2_power">-</td>
+                <td id="col3_power">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Annual Usage</td>
+                <td id="col1_annual">-</td>
+                <td id="col2_annual">-</td>
+                <td id="col3_annual">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Annual Cost</td>
+                <td id="col1_cost">-</td>
+                <td id="col2_cost">-</td>
+                <td id="col3_cost">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Energy Savings</td>
+                <td id="col1_savings" class="best-value">-</td>
+                <td id="col2_savings">-</td>
+                <td id="col3_savings" class="best-value">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Govt. Subsidy</td>
+                <td id="col1_subsidy">-</td>
+                <td id="col2_subsidy">-</td>
+                <td id="col3_subsidy">-</td>
+            </tr>
+
+            <tr>
+                <td class="row-label">Exchange Offer</td>
+                <td id="col1_exchange">-</td>
+                <td id="col2_exchange">-</td>
+                <td id="col3_exchange">-</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- Info note below table -->
+    <div class="calc-note" style="max-width: 700px; margin: 24px auto 0;">
+        <strong>Tip:</strong> A 5-star appliance uses around 30 to 40 percent less electricity than a 1-star model.
+        The higher upfront cost is usually recovered within 1 to 2 years through lower electricity bills.
+    </div>
+
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>CleanEnergyHub</h4>
+            <p>India's trusted store for energy-efficient, eco-friendly home appliances.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Customer Support</h4>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Warranty Info</a></li>
+                <li><a href="#">Free Installation</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <ul>
+                <li><a href="#">1800-GREEN-01 (Toll Free)</a></li>
+                <li><a href="#">info@cleanenergyhub.in</a></li>
+                <li><a href="#">Green Plaza, Andheri West,<br>Mumbai - 400053</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 CleanEnergyHub &nbsp;|&nbsp; B.Tech CSE 2025-29, Semester II &nbsp;|&nbsp; ITM Skills University
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energy Calculator - Clean Energy Hub</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav>
+    <div class="logo">Clean<span>Energy</span>Hub</div>
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="calculator.html" class="active">Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- ==================== PAGE BANNER ==================== -->
+<div class="page-banner">
+    <h1>Energy Savings Calculator</h1>
+    <p>Enter your appliance details below to see your estimated electricity consumption and cost</p>
+</div>
+
+
+<!-- ==================== CALCULATOR SECTION ==================== -->
+<section>
+
+    <!-- CSS Grid layout: left = form, right = results -->
+    <div class="calc-layout" id="calcForm">
+
+        <!-- LEFT: Input Form -->
+        <div class="calc-form-box">
+            <h3>Enter Your Details</h3>
+
+            <!-- Dropdown: Appliance type -->
+            <div class="form-row">
+                <label for="applianceType">Select Appliance</label>
+                <select id="applianceType">
+                    <option value="ac">Air Conditioner</option>
+                    <option value="fridge">Refrigerator</option>
+                    <option value="washer">Washing Machine</option>
+                    <option value="fan">Ceiling Fan</option>
+                    <option value="tv">Television</option>
+                    <option value="bulb">LED Bulb</option>
+                </select>
+            </div>
+
+            <!-- Dropdown: Star rating -->
+            <div class="form-row">
+                <label for="starRating">BEE Star Rating of Your Appliance</label>
+                <select id="starRating">
+                    <option value="1">1 Star  (Least efficient)</option>
+                    <option value="2">2 Star</option>
+                    <option value="3" selected>3 Star  (Average)</option>
+                    <option value="4">4 Star</option>
+                    <option value="5">5 Star  (Most efficient)</option>
+                </select>
+            </div>
+
+            <!-- Number input: Hours used per day -->
+            <div class="form-row">
+                <label for="hoursPerDay">Hours Used Per Day</label>
+                <input
+                    type="number"
+                    id="hoursPerDay"
+                    min="0"
+                    max="24"
+                    value="8"
+                    placeholder="Enter hours (0 to 24)"
+                />
+            </div>
+
+            <!-- Number input: Electricity rate -->
+            <div class="form-row">
+                <label for="unitCost">Electricity Rate (Rs. per kWh)</label>
+                <input
+                    type="number"
+                    id="unitCost"
+                    min="1"
+                    max="20"
+                    value="7"
+                    step="0.5"
+                    placeholder="Enter your rate (e.g. 7)"
+                />
+            </div>
+
+            <!-- Short explanation of how it works -->
+            <div class="calc-note">
+                <strong>How the calculation works:</strong><br>
+                Each extra star rating saves about 7% energy compared to a 1-star model.
+                A 5-star appliance uses roughly 28% less electricity than a 1-star one.
+                The result updates automatically as you change any value.
+            </div>
+        </div>
+
+
+        <!-- RIGHT: Results Box -->
+        <div class="result-box">
+            <h3>Your Estimated Results</h3>
+
+            <div class="result-item">
+                <div class="result-label">Daily Consumption</div>
+                <div class="result-value" id="resDaily">-- kWh</div>
+            </div>
+
+            <hr class="result-divider">
+
+            <div class="result-item">
+                <div class="result-label">Monthly Consumption and Cost</div>
+                <div class="result-value" id="resMonthly">-- kWh</div>
+            </div>
+
+            <hr class="result-divider">
+
+            <div class="result-item">
+                <div class="result-label">Annual Consumption and Cost</div>
+                <div class="result-value" id="resAnnual">-- kWh</div>
+            </div>
+
+            <hr class="result-divider">
+
+            <div class="result-item savings">
+                <div class="result-label">Annual Savings vs 1-Star Model</div>
+                <div class="result-value" id="resSavings">Rs. --</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Extra info cards below calculator -->
+    <br>
+    <div class="features-grid" style="max-width: 860px; margin: 0 auto;">
+
+        <div class="feature-box">
+            <div class="feat-icon">&#8962;</div>
+            <h4>Average Indian Home</h4>
+            <p>Spends Rs. 3,000 to Rs. 5,000 per month on electricity bills</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feat-icon">&#9651;</div>
+            <h4>AC is the Biggest User</h4>
+            <p>Air conditioning can account for 40 to 50 percent of a home electricity bill</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feat-icon">&#9733;</div>
+            <h4>5-Star vs 3-Star AC</h4>
+            <p>A 5-star AC saves around Rs. 2,000 to Rs. 3,000 per year compared to a 3-star model</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feat-icon">&#9675;</div>
+            <h4>Environmental Benefit</h4>
+            <p>Energy-efficient appliances can reduce a home CO2 output by up to 2 tonnes per year</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>CleanEnergyHub</h4>
+            <p>India's trusted store for energy-efficient, eco-friendly home appliances.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Customer Support</h4>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Warranty Info</a></li>
+                <li><a href="#">Free Installation</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <ul>
+                <li><a href="#">1800-GREEN-01 (Toll Free)</a></li>
+                <li><a href="#">info@cleanenergyhub.in</a></li>
+                <li><a href="#">Green Plaza, Andheri West,<br>Mumbai - 400053</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 CleanEnergyHub &nbsp;|&nbsp; B.Tech CSE 2025-29, Semester II &nbsp;|&nbsp; ITM Skills University
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
